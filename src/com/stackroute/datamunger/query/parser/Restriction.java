@@ -9,9 +9,43 @@ package com.stackroute.datamunger.query.parser;
 
 public class Restriction {
 
-	// Write logic for constructor
-	public Restriction(String name, String value, String condition) {
+	private static String name;
+	private static String condition;
+	private static String value;
+
+	public Restriction() {
 
 	}
+	public Restriction(String name, String value, String condition) {
+		this.name = name;
+		this.value = value;
+		this.condition = condition;
+	}
+	public static String getName() {
+		return name;
+	}
 
+	public static void setName(String name) {
+		Restriction.name = name;
+	}
+
+	public static String getCondition() {
+		return condition;
+	}
+
+	public static void setCondition(String condition) {
+		Restriction.condition = condition;
+	}
+
+	public static String getValue() {
+		return value;
+	}
+
+	public static void setValue(String value) {
+		Restriction.value = value;
+	}
+
+	public String toString() {
+		return this.name+" "+this.value+" "+this.condition;
+	}
 }
